@@ -1,0 +1,22 @@
+{
+  "name": "purescript-functions",
+  "homepage": "https://github.com/purescript/purescript-functions",
+  "description": "Function combinators and types for multi-argument functions",
+  "keywords": [
+    "purescript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "tmp",
+    "bower.json",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-prelude": "~0.1.0"
+  }
+}
