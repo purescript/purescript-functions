@@ -1,27 +1,49 @@
+/* jshint node: true */
 "use strict";
 
 var gulp = require("gulp");
+var jshint = require("gulp-jshint");
+var jscs = require("gulp-jscs");
 var plumber = require("gulp-plumber");
 var purescript = require("gulp-purescript");
-var jsvalidate = require("gulp-jsvalidate");
 
-gulp.task("make", function() {
-  return gulp.src(["src/**/*.purs"])
-    .pipe(plumber())
-    .pipe(purescript.pscMake());
+var sources = [
+  "src/**/*.purs",
+  "bower_components/purescript-*/src/**/*.purs"
+];
+
+var foreigns = [
+  "src/**/*.js",
+  "bower_components/purescript-*/src/**/*.js"
+];
+
+gulp.task("lint", function() {
+  return gulp.src("src/**/*.js")
+    .pipe(jshint())
+    .pipe(jshint.reporter())
+    .pipe(jscs());
 });
 
-gulp.task("jsvalidate", ["make"], function () {
-  return gulp.src("output/**/*.js")
+gulp.task("make", ["lint"], function() {
+  return gulp.src(sources)
     .pipe(plumber())
-    .pipe(jsvalidate());
+    .pipe(purescript.pscMake({ ffi: foreigns }));
 });
 
 gulp.task("docs", function () {
-  return gulp.src("src/**/*.purs")
+  return gulp.src(sources)
     .pipe(plumber())
-    .pipe(purescript.pscDocs())
-    .pipe(gulp.dest("README.md"));
+    .pipe(purescript.pscDocs({
+      docgen: {
+        "Data.Function": "docs/Data.Function.md"
+      }
+    }));
 });
 
-gulp.task("default", ["jsvalidate", "docs"]);
+gulp.task("dotpsci", function () {
+  return gulp.src(sources)
+    .pipe(plumber())
+    .pipe(purescript.dotPsci());
+});
+
+gulp.task("default", ["make", "docs", "dotpsci"]);
