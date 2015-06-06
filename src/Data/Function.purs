@@ -1,5 +1,7 @@
 module Data.Function where
 
+import Prelude
+
 -- | The `on` function is used to change the domain of a binary operator.
 -- |
 -- | For example, we can create a function which compares two records based on the values of their `x` properties:
