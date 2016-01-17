@@ -1,10 +1,7 @@
 {
   "name": "purescript-functions",
   "homepage": "https://github.com/purescript/purescript-functions",
-  "description": "Function combinators and types for multi-argument functions",
-  "keywords": [
-    "purescript"
-  ],
+  "description": "Function combinators and types for uncurried multi-argument functions",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -20,6 +17,6 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-prelude": "^0.1.0"
+    "purescript-prelude": "^1.0.0-rc.1"
   }
 }

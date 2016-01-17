@@ -1,17 +1,6 @@
-module Data.Function where
+module Data.Function.Uncurried where
 
-import Prelude
-
--- | The `on` function is used to change the domain of a binary operator.
--- |
--- | For example, we can create a function which compares two records based on the values of their `x` properties:
--- |
--- | ```purescript
--- | compareX :: forall r. { x :: Number | r } -> { x :: Number | r } -> Ordering
--- | compareX = compare `on` _.x
--- | ```
-on :: forall a b c. (b -> b -> c) -> (a -> b) -> a -> a -> c
-on f g x y = g x `f` g y
+import Data.Unit (Unit)
 
 -- | A function of zero arguments
 foreign import data Fn0 :: * -> *
