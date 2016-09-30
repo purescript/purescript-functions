@@ -6,7 +6,7 @@ import Data.Unit (Unit)
 foreign import data Fn0 :: * -> *
 
 -- | A function of one argument
-foreign import data Fn1 :: * -> * -> *
+type Fn1 a b = a -> b
 
 -- | A function of two arguments
 foreign import data Fn2 :: * -> * -> * -> *
@@ -39,7 +39,8 @@ foreign import data Fn10 :: * -> * -> * -> * -> * -> * -> * -> * -> * -> * -> * 
 foreign import mkFn0 :: forall a. (Unit -> a) -> Fn0 a
 
 -- | Create a function of one argument
-foreign import mkFn1 :: forall a b. (a -> b) -> Fn1 a b
+mkFn1 :: forall a b. (a -> b) -> Fn1 a b
+mkFn1 f = f
 
 -- | Create a function of two arguments from a curried function
 foreign import mkFn2 :: forall a b c. (a -> b -> c) -> Fn2 a b c
@@ -72,7 +73,8 @@ foreign import mkFn10 :: forall a b c d e f g h i j k. (a -> b -> c -> d -> e ->
 foreign import runFn0 :: forall a. Fn0 a -> a
 
 -- | Apply a function of one argument
-foreign import runFn1 :: forall a b. Fn1 a b -> a -> b
+runFn1 :: forall a b. Fn1 a b -> a -> b
+runFn1 f = f
 
 -- | Apply a function of two arguments
 foreign import runFn2 :: forall a b c. Fn2 a b c -> a -> b -> c
