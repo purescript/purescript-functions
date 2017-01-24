@@ -84,7 +84,7 @@ exports.runFn0 = function (fn) {
 
 exports.runFn1 = function (fn) {
   return function (a) {
-    return fn(a, b);
+    return fn(a);
   };
 };
 
