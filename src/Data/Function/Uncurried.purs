@@ -3,37 +3,37 @@ module Data.Function.Uncurried where
 import Data.Unit (Unit)
 
 -- | A function of zero arguments
-foreign import data Fn0 :: * -> *
+foreign import data Fn0 :: Type -> Type
 
 -- | A function of one argument
 type Fn1 a b = a -> b
 
 -- | A function of two arguments
-foreign import data Fn2 :: * -> * -> * -> *
+foreign import data Fn2 :: Type -> Type -> Type -> Type
 
 -- | A function of three arguments
-foreign import data Fn3 :: * -> * -> * -> * -> *
+foreign import data Fn3 :: Type -> Type -> Type -> Type -> Type
 
 -- | A function of four arguments
-foreign import data Fn4 :: * -> * -> * -> * -> * -> *
+foreign import data Fn4 :: Type -> Type -> Type -> Type -> Type -> Type
 
 -- | A function of five arguments
-foreign import data Fn5 :: * -> * -> * -> * -> * -> * -> *
+foreign import data Fn5 :: Type -> Type -> Type -> Type -> Type -> Type -> Type
 
 -- | A function of six arguments
-foreign import data Fn6 :: * -> * -> * -> * -> * -> * -> * -> *
+foreign import data Fn6 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
 -- | A function of seven arguments
-foreign import data Fn7 :: * -> * -> * -> * -> * -> * -> * -> * -> *
+foreign import data Fn7 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
 -- | A function of eight arguments
-foreign import data Fn8 :: * -> * -> * -> * -> * -> * -> * -> * -> * -> *
+foreign import data Fn8 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
 -- | A function of nine arguments
-foreign import data Fn9 :: * -> * -> * -> * -> * -> * -> * -> * -> * -> * -> *
+foreign import data Fn9 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
 -- | A function of ten arguments
-foreign import data Fn10 :: * -> * -> * -> * -> * -> * -> * -> * -> * -> * -> * -> *
+foreign import data Fn10 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
 -- | Create a function of no arguments
 foreign import mkFn0 :: forall a. (Unit -> a) -> Fn0 a
