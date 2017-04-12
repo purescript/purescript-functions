@@ -8,6 +8,13 @@ exports.mkFn0 = function (fn) {
   };
 };
 
+exports.mkFn1 = function (fn) {
+  /* jshint maxparams: 1 */
+  return function (a) {
+    return fn(a);
+  };
+};
+
 exports.mkFn2 = function (fn) {
   /* jshint maxparams: 2 */
   return function (a, b) {
@@ -73,6 +80,12 @@ exports.mkFn10 = function (fn) {
 
 exports.runFn0 = function (fn) {
   return fn();
+};
+
+exports.runFn1 = function (fn) {
+  return function (a) {
+    return fn(a);
+  };
 };
 
 exports.runFn2 = function (fn) {
