@@ -5,35 +5,55 @@ import Data.Unit (Unit)
 -- | A function of zero arguments
 foreign import data Fn0 :: Type -> Type
 
+type role Fn0 representational
+
 -- | A function of one argument
 type Fn1 a b = a -> b
 
 -- | A function of two arguments
 foreign import data Fn2 :: Type -> Type -> Type -> Type
 
+type role Fn2 representational representational representational
+
 -- | A function of three arguments
 foreign import data Fn3 :: Type -> Type -> Type -> Type -> Type
+
+type role Fn3 representational representational representational representational
 
 -- | A function of four arguments
 foreign import data Fn4 :: Type -> Type -> Type -> Type -> Type -> Type
 
+type role Fn4 representational representational representational representational representational
+
 -- | A function of five arguments
 foreign import data Fn5 :: Type -> Type -> Type -> Type -> Type -> Type -> Type
+
+type role Fn5 representational representational representational representational representational representational
 
 -- | A function of six arguments
 foreign import data Fn6 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
+type role Fn6 representational representational representational representational representational representational representational
+
 -- | A function of seven arguments
 foreign import data Fn7 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
+
+type role Fn7 representational representational representational representational representational representational representational representational
 
 -- | A function of eight arguments
 foreign import data Fn8 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
+type role Fn8 representational representational representational representational representational representational representational representational representational
+
 -- | A function of nine arguments
 foreign import data Fn9 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
+type role Fn9 representational representational representational representational representational representational representational representational representational representational
+
 -- | A function of ten arguments
 foreign import data Fn10 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
+
+type role Fn10 representational representational representational representational representational representational representational representational representational representational representational
 
 -- | Create a function of no arguments
 foreign import mkFn0 :: forall a. (Unit -> a) -> Fn0 a
