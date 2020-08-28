@@ -3,7 +3,9 @@
 // module Data.Function.Uncurried
 
 exports.mkFn0 = function (fn) {
-  return fn;
+  return function () {
+    return fn();
+  };
 };
 
 exports.mkFn2 = function (fn) {
