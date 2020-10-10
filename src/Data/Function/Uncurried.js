@@ -4,7 +4,7 @@
 
 exports.mkFn0 = function (fn) {
   return function () {
-    return fn({});
+    return fn();
   };
 };
 
