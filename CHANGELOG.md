@@ -5,12 +5,17 @@ Notable changes to this project are documented in this file. The format is based
 ## [Unreleased]
 
 Breaking changes:
+- Added support for PureScript 0.14 and dropped support for all previous versions (#12)
 
 New features:
+- Added roles declarations to allow safe coercions (#12)
 
 Bugfixes:
 
 Other improvements:
+- Migrated CI to GitHub Actions and updated installation instructions to use Spago (#13)
+- Added a CHANGELOG.md file and pull request template (#14, #15)
+- Removed `return {}` from FFI functions for a small performance boost (#10)
 
 ## [v4.0.0](https://github.com/purescript/purescript-functions/releases/tag/v4.0.0) - 2018-05-22
 
