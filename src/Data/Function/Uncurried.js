@@ -2,80 +2,80 @@
 
 // module Data.Function.Uncurried
 
-exports.mkFn0 = function (fn) {
+export var mkFn0 = function (fn) {
   return function () {
     return fn();
   };
 };
 
-exports.mkFn2 = function (fn) {
+export var mkFn2 = function (fn) {
   /* jshint maxparams: 2 */
   return function (a, b) {
     return fn(a)(b);
   };
 };
 
-exports.mkFn3 = function (fn) {
+export var mkFn3 = function (fn) {
   /* jshint maxparams: 3 */
   return function (a, b, c) {
     return fn(a)(b)(c);
   };
 };
 
-exports.mkFn4 = function (fn) {
+export var mkFn4 = function (fn) {
   /* jshint maxparams: 4 */
   return function (a, b, c, d) {
     return fn(a)(b)(c)(d);
   };
 };
 
-exports.mkFn5 = function (fn) {
+export var mkFn5 = function (fn) {
   /* jshint maxparams: 5 */
   return function (a, b, c, d, e) {
     return fn(a)(b)(c)(d)(e);
   };
 };
 
-exports.mkFn6 = function (fn) {
+export var mkFn6 = function (fn) {
   /* jshint maxparams: 6 */
   return function (a, b, c, d, e, f) {
     return fn(a)(b)(c)(d)(e)(f);
   };
 };
 
-exports.mkFn7 = function (fn) {
+export var mkFn7 = function (fn) {
   /* jshint maxparams: 7 */
   return function (a, b, c, d, e, f, g) {
     return fn(a)(b)(c)(d)(e)(f)(g);
   };
 };
 
-exports.mkFn8 = function (fn) {
+export var mkFn8 = function (fn) {
   /* jshint maxparams: 8 */
   return function (a, b, c, d, e, f, g, h) {
     return fn(a)(b)(c)(d)(e)(f)(g)(h);
   };
 };
 
-exports.mkFn9 = function (fn) {
+export var mkFn9 = function (fn) {
   /* jshint maxparams: 9 */
   return function (a, b, c, d, e, f, g, h, i) {
     return fn(a)(b)(c)(d)(e)(f)(g)(h)(i);
   };
 };
 
-exports.mkFn10 = function (fn) {
+export var mkFn10 = function (fn) {
   /* jshint maxparams: 10 */
   return function (a, b, c, d, e, f, g, h, i, j) {
     return fn(a)(b)(c)(d)(e)(f)(g)(h)(i)(j);
   };
 };
 
-exports.runFn0 = function (fn) {
+export var runFn0 = function (fn) {
   return fn();
 };
 
-exports.runFn2 = function (fn) {
+export var runFn2 = function (fn) {
   return function (a) {
     return function (b) {
       return fn(a, b);
@@ -83,7 +83,7 @@ exports.runFn2 = function (fn) {
   };
 };
 
-exports.runFn3 = function (fn) {
+export var runFn3 = function (fn) {
   return function (a) {
     return function (b) {
       return function (c) {
@@ -93,7 +93,7 @@ exports.runFn3 = function (fn) {
   };
 };
 
-exports.runFn4 = function (fn) {
+export var runFn4 = function (fn) {
   return function (a) {
     return function (b) {
       return function (c) {
@@ -105,7 +105,7 @@ exports.runFn4 = function (fn) {
   };
 };
 
-exports.runFn5 = function (fn) {
+export var runFn5 = function (fn) {
   return function (a) {
     return function (b) {
       return function (c) {
@@ -119,7 +119,7 @@ exports.runFn5 = function (fn) {
   };
 };
 
-exports.runFn6 = function (fn) {
+export var runFn6 = function (fn) {
   return function (a) {
     return function (b) {
       return function (c) {
@@ -135,7 +135,7 @@ exports.runFn6 = function (fn) {
   };
 };
 
-exports.runFn7 = function (fn) {
+export var runFn7 = function (fn) {
   return function (a) {
     return function (b) {
       return function (c) {
@@ -153,7 +153,7 @@ exports.runFn7 = function (fn) {
   };
 };
 
-exports.runFn8 = function (fn) {
+export var runFn8 = function (fn) {
   return function (a) {
     return function (b) {
       return function (c) {
@@ -173,7 +173,7 @@ exports.runFn8 = function (fn) {
   };
 };
 
-exports.runFn9 = function (fn) {
+export var runFn9 = function (fn) {
   return function (a) {
     return function (b) {
       return function (c) {
@@ -195,7 +195,7 @@ exports.runFn9 = function (fn) {
   };
 };
 
-exports.runFn10 = function (fn) {
+export var runFn10 = function (fn) {
   return function (a) {
     return function (b) {
       return function (c) {
