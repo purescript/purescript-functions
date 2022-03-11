@@ -1,5 +1,3 @@
-"use strict";
-
 // module Data.Function.Uncurried
 
 export const mkFn0 = function (fn) {
