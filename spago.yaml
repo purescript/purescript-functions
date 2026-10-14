@@ -1,0 +1,9 @@
+package:
+  name: functions
+  description: Function combinators and types for uncurried multi-argument functions
+  build:
+    strict: true
+    pedanticPackages: true
+  dependencies:
+    - prelude: ">=6.0.0 <7.0.0"
+workspace: {}
