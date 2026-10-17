@@ -2,7 +2,7 @@
 
 Notable changes to this project are documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased](https://github.com/purescript/purescript-functions/compare/v6.0.1...HEAD)
 
 Breaking changes:
 
@@ -12,9 +12,22 @@ Bugfixes:
 
 Other improvements:
 
+## [v6.0.1](https://github.com/purescript/purescript-functions/releases/tag/v6.0.1) - 2026-10-17
+
+Breaking changes:
+
+New features:
+
+Bugfixes:
+
+Other improvements:
+
+- Migrate from Bower/Pulp to Spago and update CI and formatting/linting tools (#21 by @thomashoneyman)
+
 ## [v6.0.0](https://github.com/purescript/purescript-functions/releases/tag/v6.0.0) - 2022-04-27
 
 Breaking changes:
+
 - Migrated FFI to ES modules (#19 by @kl0tl and @JordanMartinez)
 
 New features:
@@ -26,14 +39,17 @@ Other improvements:
 ## [v5.0.0](https://github.com/purescript/purescript-functions/releases/tag/v5.0.0) - 2021-02-26
 
 Breaking changes:
+
 - Added support for PureScript 0.14 and dropped support for all previous versions (#12)
 
 New features:
+
 - Added roles declarations to allow safe coercions (#12)
 
 Bugfixes:
 
 Other improvements:
+
 - Migrated CI to GitHub Actions and updated installation instructions to use Spago (#13)
 - Added a CHANGELOG.md file and pull request template (#14, #15)
 - Removed `return {}` from FFI functions for a small performance boost (#10)
@@ -68,4 +84,3 @@ This release works with versions 0.7.\* of the PureScript compiler. It will not 
 ## [v0.1.0-rc.1](https://github.com/purescript/purescript-functions/releases/tag/v0.1.0-rc.1) - 2015-06-06
 
 Initial release candidate.
-
